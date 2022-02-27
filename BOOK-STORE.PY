@@ -1,3 +1,4 @@
+
 #Specifying Encoding
 #Encoding = ANSI
 #Clearing Terminal Screen
