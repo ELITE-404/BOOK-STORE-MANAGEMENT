@@ -1072,7 +1072,7 @@ def start():
             except ValueError:
                 c.print("[red][!] INVALID INPUT ")
                 speak("OPTION OUT OF RANGE")
-                c.print("[red][+] TRY AGAIN\033[0m")
+                c.print("[red][+] TRY AGAIN")
                 speak("Try Again")
                 time.sleep(0.9)
                 clear()
@@ -1122,7 +1122,7 @@ def start():
         c.print("[green]-------------------------------------------------- REDIRECTING TO THE MAIN PAGE --------------------------------------------------")
         speak("REDIRECTING TO THE MAIN PAGE")
         time.sleep(0.5)
-        c.print("[green]-------------------------------------------------- WELCOME TO THE MAIN PAGE OF HACKER HUB --------------------------------------------------\n\033[0m")
+        c.print("[green]-------------------------------------------------- WELCOME TO THE MAIN PAGE OF HACKER HUB --------------------------------------------------\n")
         speak("WELCOME TO THE MAIN PAGE OF HACKER HUB")
         in_login()
     if choice == 3:
