@@ -20,9 +20,9 @@ def user_login():
 	import mysql.connector as t
 	connect = t.connect(host = 'localhost', user = 'root', password = 'root')
 	cursor = connect.cursor()
-	createdb = "CREATE DATABASE USER_INFO;"
+	createdb = "CREATE DATABASE USER_LOGIN;"
 	cursor.execute(createdb)
-	use_db = "USE USER_INFO;"
+	use_db = "USE USER_LOGIN;"
 	cursor.execute(use_db)
 	create_table = "CREATE TABLE LOGIN_INFO(EMAIL VARCHAR(255) NOT NULL, USERNAME VARCHAR(255) NOT NULL PRIMARY KEY, NAME VARCHAR(255) NOT NULL, PASSWORD VARCHAR(255) NOT NULL, SECRET_CODE INT(8) NOT NULL UNIQUE KEY);"
 	cursor.execute(create_table)
