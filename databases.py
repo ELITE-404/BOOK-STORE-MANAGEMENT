@@ -1,5 +1,5 @@
 
-print()
+print("Databases Added Succesully")
 def bookstore():
 	import mysql.connector as t 
 	connect = t.connect(host = 'localhost', user = 'root', password = 'root')
@@ -8,7 +8,7 @@ def bookstore():
 	cursor.execute(createdb)
 	use_db = "USE BOOKSTORE;"
 	cursor.execute(use_db)
-	create_table = "CREATE TABLE BOOKS_IN_STORE(BOOK_ID INT(255) NOT NULL PRIMARY KEY, BOOK_NAME VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, BOOK_DESCP TEXT NOT NULL, PRICE INT(255) NOT NULL, STOCK INT(255) NOT NULL);"
+	create_table = "CREATE TABLE BOOKS_IN_STORE(BOOK_ID INT(255) NOT NULL PRIMARY KEY, BOOK_NAME VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, BOOK_DESCP TEXT , PRICE INT(255) NOT NULL, STOCK INT(255) NOT NULL);"
 	table_details = "CREATE TABLE TRANSACTION_DETAILS(TRANSACTION_ID INT(8) NOT NULL PRIMARY KEY, USERNAME VARCHAR(255) NOT NULL, BOOKS_PURCHASED INT(255) NOT NULL, BOOKS_NAME VARCHAR(255) NOT NULL, PRICE INT(255), DATE_OF_PURCHASE DATE NOT NULL);"
 	cursor.execute(create_table)
 	cursor.execute(table_details)
@@ -37,7 +37,7 @@ def review():
 	cursor.execute(createdb)
 	use_db = "USE REVIEWS"
 	cursor.execute(use_db)
-	create_table = "CREATE TABLE REVIEWS(USERNAME VARCHAR(255) NOT NULL PRIMARY KEY, EMAIL VARCHAR(255) NOT NULL, REVIEW TEXT);"
+	create_table = "CREATE TABLE REVIEWS(NAME VARCHAR(255) NOT NULL PRIMARY KEY, EMAIL VARCHAR(255) NOT NULL,BOOK_NAME VARCHAR(255) NOT NULL,REVIEW TEXT);"
 	cursor.execute(create_table)
 	connect.commit()
 review()
