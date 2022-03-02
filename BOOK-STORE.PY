@@ -43,16 +43,16 @@ check_modules()
 
 
 def loading_bar():
-	import time
-	time.sleep(1.5)
-	from rich.progress import Progress
-	with Progress() as progress:
-		task1 = progress.add_task("[red]DOWNLOADING...", total=100)
-		task2 = progress.add_task("[green]INITIALIZING...", total=100)
-		while not progress.finished:
-			progress.update(task1, advance=0.9)
-			progress.update(task2, advance=0.6)
-			time.sleep(0.02)
+    import time
+    time.sleep(1.5)
+    from rich.progress import Progress
+    with Progress() as progress:
+        task1 = progress.add_task("[red]DOWNLOADING...", total=100)
+        task2 = progress.add_task("[green]INITIALIZING...", total=100)
+        while not progress.finished:
+            progress.update(task1, advance=0.9)
+            progress.update(task2, advance=0.6)
+            time.sleep(0.02)
 loading_bar()
 
 
@@ -85,44 +85,44 @@ clear()
 
 # Banner Of The Hakcer Hub Book Library
 def Banner():
-	c.print("\t\t[red]88----------------------------------------   HACKERS ARE HERE WHERE ARE YOU !?    ---------------------------------------------88")
-	c.print("\t\t[red]88   _           _                                                                       _           _                         88")
-	c.print("\t\t[red]88  | |         | |                                                                     | |         | |                        88")
-	c.print("\t\t[red]88  | |         | |                                                                     | |         | |                        88")
-	c.print("\t\t[red]88  | |         | |                                                                     | |         | |                        88")
-	c.print("\t\t[red]88  | |         | |    _______                                                          | |         | |  _     _   ________    88")
-	c.print("\t\t[red]88  | |_________| |   / _____ \    ______   _     __   ______   _______                 | |_________| | | |   | | |   __   \   88")
-	c.print("\t\t[red]88  |  _________  |  / /     \ \  |  ____| | |   / /  |  ____) |  ___  |                |  _________  | | |   | | |  |  \   |  88")
-	c.print("\t\t[red]88  | |         | | | |_______| | | |      | |__/ /   | |___   | |___| |                | |         | | | |   | | |  |__/ _/   88")
-	c.print("\t\t[red]88  | |         | | |  _______  | | |      |  __ /    |  ___)  |  _  __|                | |         | | | |   | | |  |  \  \   88")
-	c.print("\t\t[red]88  | |         | | | |       | | | |____  | |  \ \   | |____  | | \ \                  | |         | | | |___| | |  |__/   |  88")
-	c.print("\t\t[red]88  |_|         |_| | |       | | |______| |_|   \_\  |______) |_|  \_\                 |_|         |_| |_______| |________/   88")
-	c.print("\t\t[red]88----------------------------------------  A PLACE ALL ABOUT HACKING / HACKERS  ----------------------------------------------88")
-	c.print("\t\t[red]88----------------------------------------            BY TEAM INFINITY           ----------------------------------------------88\n")
+    c.print("\t\t[red]88----------------------------------------   HACKERS ARE HERE WHERE ARE YOU !?    ---------------------------------------------88")
+    c.print("\t\t[red]88   _           _                                                                       _           _                         88")
+    c.print("\t\t[red]88  | |         | |                                                                     | |         | |                        88")
+    c.print("\t\t[red]88  | |         | |                                                                     | |         | |                        88")
+    c.print("\t\t[red]88  | |         | |                                                                     | |         | |                        88")
+    c.print("\t\t[red]88  | |         | |    _______                                                          | |         | |  _     _   ________    88")
+    c.print("\t\t[red]88  | |_________| |   / _____ \    ______   _     __   ______   _______                 | |_________| | | |   | | |   __   \   88")
+    c.print("\t\t[red]88  |  _________  |  / /     \ \  |  ____| | |   / /  |  ____) |  ___  |                |  _________  | | |   | | |  |  \   |  88")
+    c.print("\t\t[red]88  | |         | | | |_______| | | |      | |__/ /   | |___   | |___| |                | |         | | | |   | | |  |__/ _/   88")
+    c.print("\t\t[red]88  | |         | | |  _______  | | |      |  __ /    |  ___)  |  _  __|                | |         | | | |   | | |  |  \  \   88")
+    c.print("\t\t[red]88  | |         | | | |       | | | |____  | |  \ \   | |____  | | \ \                  | |         | | | |___| | |  |__/   |  88")
+    c.print("\t\t[red]88  |_|         |_| | |       | | |______| |_|   \_\  |______) |_|  \_\                 |_|         |_| |_______| |________/   88")
+    c.print("\t\t[red]88----------------------------------------  A PLACE ALL ABOUT HACKING / HACKERS  ----------------------------------------------88")
+    c.print("\t\t[red]88----------------------------------------            BY TEAM INFINITY           ----------------------------------------------88\n")
 Banner()
 speak("WELCOME TO HACKERS HUB")
 
 
 # Wrong Username
 def wrong_username():
-	ask = c.input("[cyan]Entered Wrong Username By Mistake [Y/N] [DEFAULT N] : ")
-	case = ask.upper()
-	while not re.match("^[Y&N]*$",case):
-		c.print("[red][!] ERROR ! ONLY Y AND N ALLOWED")
-		speak("ERROR ONLY Y AND N ALLOWED")
-		more = c.input("[cyan]Entered Wrong Username By Mistake [Y/N] [DEFAULT N] : ")
-		case = more.upper()
-	while not re.match("^[Y&N]*$",case):
-		c.print("[red][!] ERROR ! ONLY Y AND N ALLOWED")
-		speak("ERROR ONLY Y AND N ALLOWED")
-		break
-		continue
-	while case == "Y":
-		validation()
-		break
-	while case == "N" or " ":
-		Register()
-		break
+    ask = c.input("[cyan]Entered Wrong Username By Mistake [Y/N] [DEFAULT N] : ")
+    case = ask.upper()
+    while not re.match("^[Y&N]*$",case):
+        c.print("[red][!] ERROR ! ONLY Y AND N ALLOWED")
+        speak("ERROR ONLY Y AND N ALLOWED")
+        more = c.input("[cyan]Entered Wrong Username By Mistake [Y/N] [DEFAULT N] : ")
+        case = more.upper()
+    while not re.match("^[Y&N]*$",case):
+        c.print("[red][!] ERROR ! ONLY Y AND N ALLOWED")
+        speak("ERROR ONLY Y AND N ALLOWED")
+        break
+        continue
+    while case == "Y":
+        validation()
+        break
+    while case == "N" or " ":
+        Register()
+        break
 
 
 
@@ -185,43 +185,43 @@ def validation():
 
 #Registering User If Directly Approaches Login
 def Register():
-	register = c.input("[cyan]Wanna Register To Hacker Hub [Y/N] [DEFAULT Y] : ")
-	case = register.upper()
-	while not re.match("^[Y&N]*$",case):
-		c.print("[red][!] ERROR ! ONLY Y AND N ALLOWED")
-		speak("ERROR ONLY Y AND N ALLOWED")
-		more = c.input("[cyan]Wanna Resgister To Hacker Hub [Y/N] [DEFAULT Y] : ")
-		case = more.upper()
-	while not re.match("^[Y&N]*$",case):
-		c.print("[red][!] ERROR ! ONLY Y AND N ALLOWED")
-		speak("ERROR ONLY Y AND N ALLOWED")
-		break
-		continue
-	while case == "N":
-		c.print("[green]-------------------------------------------------- REDIRECTING TO THE START PAGE --------------------------------------------------")
-		speak("REDIRECTING TO THE START PAGE")
-		time.sleep(1)
-		clear()
-		Banner()
-		start()
-		break
-	while case == "Y" or " ":
-		time.sleep(0.5)
-		c.print("[green]\t-------------------------------------------- REDIRECTING TO THE REGISTRATION FORM --------------------------------------------")
-		speak("REDIRECTING TO THE REGISTRATION FORM")
-		time.sleep(0.3)
-		clear()
-		Banner()
-		new()
-		c.print("[green]-------------------------------------------------- REDIRECTING TO LOGIN FORM --------------------------------------------------")
-		speak("REDIRECTING TO LOGIN FORM")
-		time.sleep(1.5)
-		clear()
-		Banner()
-		c.print("[green]\t\t ------------------------------------------- WELCOME TO LOGIN FORM OF HACKER HUB -------------------------------------------")
-		speak("WELCOME T0 LOGIN FORM OF HACKER HUB")
-		validation()
-		break		
+    register = c.input("[cyan]Wanna Register To Hacker Hub [Y/N] [DEFAULT Y] : ")
+    case = register.upper()
+    while not re.match("^[Y&N]*$",case):
+        c.print("[red][!] ERROR ! ONLY Y AND N ALLOWED")
+        speak("ERROR ONLY Y AND N ALLOWED")
+        more = c.input("[cyan]Wanna Resgister To Hacker Hub [Y/N] [DEFAULT Y] : ")
+        case = more.upper()
+    while not re.match("^[Y&N]*$",case):
+        c.print("[red][!] ERROR ! ONLY Y AND N ALLOWED")
+        speak("ERROR ONLY Y AND N ALLOWED")
+        break
+        continue
+    while case == "N":
+        c.print("[green]-------------------------------------------------- REDIRECTING TO THE START PAGE --------------------------------------------------")
+        speak("REDIRECTING TO THE START PAGE")
+        time.sleep(1)
+        clear()
+        Banner()
+        start()
+        break
+    while case == "Y" or " ":
+        time.sleep(0.5)
+        c.print("[green]\t-------------------------------------------- REDIRECTING TO THE REGISTRATION FORM --------------------------------------------")
+        speak("REDIRECTING TO THE REGISTRATION FORM")
+        time.sleep(0.3)
+        clear()
+        Banner()
+        new()
+        c.print("[green]-------------------------------------------------- REDIRECTING TO LOGIN FORM --------------------------------------------------")
+        speak("REDIRECTING TO LOGIN FORM")
+        time.sleep(1.5)
+        clear()
+        Banner()
+        c.print("[green]\t\t ------------------------------------------- WELCOME TO LOGIN FORM OF HACKER HUB -------------------------------------------")
+        speak("WELCOME T0 LOGIN FORM OF HACKER HUB")
+        validation()
+        break       
 
 
 #Registering New User Directly
@@ -391,43 +391,43 @@ def forgot():
     cursor.execute(query)
     fetch = cursor.fetchone()
     while True:
-    	try:
-    		secret = int(c.input("[cyan]Enter Your Secret Key : "))
-    		break
-    	except ValueError:
-    		c.print("[red][!] INVALID SECRET CODE ")
-    		speak("INVALID SECRET CODE")
+        try:
+            secret = int(c.input("[cyan]Enter Your Secret Key : "))
+            break
+        except ValueError:
+            c.print("[red][!] INVALID SECRET CODE ")
+            speak("INVALID SECRET CODE")
 
-    		c.print("[green]REDIRECTING TO START PAGE.......")
-    		speak("REDIRECTING TO START PAGE")
-    		
-    		time.sleep(2)
-    		clear()
-    		Banner()
-    		start()
-    		continue
+            c.print("[green]REDIRECTING TO START PAGE.......")
+            speak("REDIRECTING TO START PAGE")
+            
+            time.sleep(2)
+            clear()
+            Banner()
+            start()
+            continue
     secret_key = str(secret)
     query1 = "SELECT USERNAME, PASSWORD, SECRET_CODE FROM LOGIN_INFO WHERE USERNAME = " + "'" + username + "'" " AND SECRET_CODE = " + secret_key + ";"
     cursor.execute(query1)
     fetch2 = cursor.fetchone()
     while True:
-	    while fetch2 != None:
-	        index = fetch2[1]
-	        c.print("[magenta]Your Password Is : ",index)
-	        validation()
-	    while fetch2 == None:
-	        c.print("[red][!] NO SUCH SECRET KEY FOUND")
-	        speak("NO SUCH SECRET KEY FOUND")
+        while fetch2 != None:
+            index = fetch2[1]
+            c.print("[magenta]Your Password Is : ",index)
+            validation()
+        while fetch2 == None:
+            c.print("[red][!] NO SUCH SECRET KEY FOUND")
+            speak("NO SUCH SECRET KEY FOUND")
 
-	        c.print("[green]REDIRECTING TO START PAGE.......")
-	        speak("REDIRECTING TO START PAGE")
+            c.print("[green]REDIRECTING TO START PAGE.......")
+            speak("REDIRECTING TO START PAGE")
 
-	        time.sleep(3)
-	        clear()
-	        Banner()
-	        start()
-	        break
-	    break
+            time.sleep(3)
+            clear()
+            Banner()
+            start()
+            break
+        break
 
 #Order details
 def order_details():
@@ -549,19 +549,19 @@ def in_login():
 
 #If User Asks For Available Books
 def avail():
-	from rich.console import Console
-	from rich.style import Style
-	m = Console()
-	import mysql.connector as t
-	conn = t.connect(host='localhost', database='bookstore', user='root', password='root')
-	c = conn.cursor()
-	m.print("\n[magenta][+] BOOKS CURRENTLY AVAILABLE WITH US..")
-	while True:
-		q = "SELECT BOOK_ID, BOOK_NAME, PRICE FROM BOOKS_IN_STORE"
-		c.execute(q)
-		d = c.fetchall()
-		m.print(tabulate(d, headers = ["BOOK ID", "BOOK NAME", "PRICE"], tablefmt = 'psql'))
-		break
+    from rich.console import Console
+    from rich.style import Style
+    m = Console()
+    import mysql.connector as t
+    conn = t.connect(host='localhost', database='bookstore', user='root', password='root')
+    c = conn.cursor()
+    m.print("\n[magenta][+] BOOKS CURRENTLY AVAILABLE WITH US..")
+    while True:
+        q = "SELECT BOOK_ID, BOOK_NAME, PRICE FROM BOOKS_IN_STORE"
+        c.execute(q)
+        d = c.fetchall()
+        m.print(tabulate(d, headers = ["BOOK ID", "BOOK NAME", "PRICE"], tablefmt = 'psql'))
+        break
 
 
 
@@ -623,9 +623,9 @@ def buy():
                         _xz= x[index_id]
                         id_.append(_xz)
                     except IndexError:
-                    	m.print("[yellow][+] SEARCH COMPLETED ")
-                    	speak("SEARCH COMPLETED")
-                    	break
+                        m.print("[yellow][+] SEARCH COMPLETED ")
+                        speak("SEARCH COMPLETED")
+                        break
                 break
             while True:
                 try:
@@ -644,28 +644,28 @@ def buy():
                 continue
             else:
                 while True:
-                	try:
-                		id1 = str(id)
-                		l = []
-                		amt = m.input("[cyan]Enter The Number Of Books You Want To Buy : ")
-                		amt1 = int(amt)
-                	except ValueError:
-                		m.print("[red][!] INVALID AMOUNT")
-                		speak("INVALID AMOUNT")
-                		continue
-               		l.append((amt1,))
-               		query = "SELECT STOCK FROM BOOKS_IN_STORE WHERE BOOK_ID = " + id1 + ";"
-               		s = c.execute(query)
-               		d = c.fetchmany(s)
-               		if l[0] > d[0]:
-               			m.print("[purple][!] THIS MUCH AMOUNT IS CURRENTLY UNAVAILABLE IN THE STOCKS")
-               			speak("THIS MUCH AMOUNT IS CURRENTLY UNAVAILABLE IN THE STOCKS")
-               			c.execute("UPDATE BOOKS_IN_STORE SET STOCK = STOCK")
-               			connect.commit()
-               			STK = list(sum(d, ()))
-               			m.print("[green]CURRENTLY AVAILABLE STOCKS ARE : ", STK[0])
-               			break
-               		else:
+                    try:
+                        id1 = str(id)
+                        l = []
+                        amt = m.input("[cyan]Enter The Number Of Books You Want To Buy : ")
+                        amt1 = int(amt)
+                    except ValueError:
+                        m.print("[red][!] INVALID AMOUNT")
+                        speak("INVALID AMOUNT")
+                        continue
+                    l.append((amt1,))
+                    query = "SELECT STOCK FROM BOOKS_IN_STORE WHERE BOOK_ID = " + id1 + ";"
+                    s = c.execute(query)
+                    d = c.fetchmany(s)
+                    if l[0] > d[0]:
+                        m.print("[purple][!] THIS MUCH AMOUNT IS CURRENTLY UNAVAILABLE IN THE STOCKS")
+                        speak("THIS MUCH AMOUNT IS CURRENTLY UNAVAILABLE IN THE STOCKS")
+                        c.execute("UPDATE BOOKS_IN_STORE SET STOCK = STOCK")
+                        connect.commit()
+                        STK = list(sum(d, ()))
+                        m.print("[green]CURRENTLY AVAILABLE STOCKS ARE : ", STK[0])
+                        break
+                    else:
                           com = "UPDATE BOOKS_IN_STORE SET STOCK = STOCK - " + amt + " WHERE BOOK_ID = " + id1 + ";"
                           c.execute(com)
                           connect.commit()
@@ -695,7 +695,7 @@ def buy():
                           c.execute(query2)
                           connect.commit()
                           break
-                	break
+                    break
             break
         break        
     while opt == 2:
@@ -750,29 +750,29 @@ def buy():
                 speak("REGENERATING YOUR SEARCH RESULTS")
                 continue
             else:
-            	while True:
-                	try:
-                		id1 = str(id)
-                		l = []
-                		amt = m.input("[cyan]Enter The Number Of Books You Want To Buy : ")
-                		amt1 = int(amt)
-                	except ValueError:
-                		m.print("[red][!] INVALID AMOUNT ")
-                		speak("INVALID AMOUNT")
-                		continue
-               		l.append((amt1,))
-               		query = "SELECT STOCK FROM BOOKS_IN_STORE WHERE BOOK_ID = " + id1 + ";"
-               		s = c.execute(query)
-               		d = c.fetchmany(s)
-               		if l[0] > d[0]:
-               			m.print("[purple][!] THIS MUCH AMOUNT IS CURRENTLY UNAVAILABLE IN THE STOCKS")
-               			speak("THIS MUCH AMOUNT IS CURRENTLY UNAVAILABLE IN THE STOCKS")
-               			c.execute("UPDATE BOOKS_IN_STORE SET STOCK = STOCK")
-               			connect.commit()
-               			STK = list(sum(d, ()))
-               			m.print("[green]CURRENTLY AVAILABLE STOCKS ARE : ", STK[0])
-               			break
-               		else:
+                while True:
+                    try:
+                        id1 = str(id)
+                        l = []
+                        amt = m.input("[cyan]Enter The Number Of Books You Want To Buy : ")
+                        amt1 = int(amt)
+                    except ValueError:
+                        m.print("[red][!] INVALID AMOUNT ")
+                        speak("INVALID AMOUNT")
+                        continue
+                    l.append((amt1,))
+                    query = "SELECT STOCK FROM BOOKS_IN_STORE WHERE BOOK_ID = " + id1 + ";"
+                    s = c.execute(query)
+                    d = c.fetchmany(s)
+                    if l[0] > d[0]:
+                        m.print("[purple][!] THIS MUCH AMOUNT IS CURRENTLY UNAVAILABLE IN THE STOCKS")
+                        speak("THIS MUCH AMOUNT IS CURRENTLY UNAVAILABLE IN THE STOCKS")
+                        c.execute("UPDATE BOOKS_IN_STORE SET STOCK = STOCK")
+                        connect.commit()
+                        STK = list(sum(d, ()))
+                        m.print("[green]CURRENTLY AVAILABLE STOCKS ARE : ", STK[0])
+                        break
+                    else:
                           com = "UPDATE BOOKS_IN_STORE SET STOCK = STOCK - " + amt + " WHERE BOOK_ID = " + id1 + ";"
                           c.execute(com)
                           connect.commit()
@@ -801,7 +801,7 @@ def buy():
                           c.execute(query2)
                           connect.commit()
                           break
-                	break
+                    break
             break
         break
     while opt == 3:
@@ -864,29 +864,29 @@ def buy():
                 speak("REGENERATING YOUR SEARCH RESULTS")
                 continue
             else:
-            	while True:
-                	try:
-                		id1 = str(id)
-                		l = []
-                		amt = m.input("[cyan]Enter The Number Of Books You Want To Buy : ")
-                		amt1 = int(amt)
-                	except ValueError:
-                		m.print("[red][!] INVALID INPUT")
-                		speak("INVALID INPUT")
-                		continue
-               		l.append((amt1,))
-               		query = "SELECT STOCK FROM BOOKS_IN_STORE WHERE BOOK_ID = " + id1 + ";"
-               		s = c.execute(query)
-               		d = c.fetchmany(s)
-               		if l[0] > d[0]:
-               			m.print("[purple][!] THIS MUCH AMOUNT IS CURRENTLY UNAVAILABLE IN THE STOCKS ")
-               			speak("THIS MUCH AMOUNT IS CURRENTLY UNAVAILABLE IN THE STOCKS")
-               			c.execute("UPDATE BOOKS_IN_STORE SET STOCK = STOCK")
-               			connect.commit()
-               			STK = list(sum(d, ()))
-               			m.print("[magenta]CURRENTLY AVAILABLE STOCKS ARE : ", STK[0])
-               			break
-               		else:
+                while True:
+                    try:
+                        id1 = str(id)
+                        l = []
+                        amt = m.input("[cyan]Enter The Number Of Books You Want To Buy : ")
+                        amt1 = int(amt)
+                    except ValueError:
+                        m.print("[red][!] INVALID INPUT")
+                        speak("INVALID INPUT")
+                        continue
+                    l.append((amt1,))
+                    query = "SELECT STOCK FROM BOOKS_IN_STORE WHERE BOOK_ID = " + id1 + ";"
+                    s = c.execute(query)
+                    d = c.fetchmany(s)
+                    if l[0] > d[0]:
+                        m.print("[purple][!] THIS MUCH AMOUNT IS CURRENTLY UNAVAILABLE IN THE STOCKS ")
+                        speak("THIS MUCH AMOUNT IS CURRENTLY UNAVAILABLE IN THE STOCKS")
+                        c.execute("UPDATE BOOKS_IN_STORE SET STOCK = STOCK")
+                        connect.commit()
+                        STK = list(sum(d, ()))
+                        m.print("[magenta]CURRENTLY AVAILABLE STOCKS ARE : ", STK[0])
+                        break
+                    else:
                           com = "UPDATE BOOKS_IN_STORE SET STOCK = STOCK - " + amt + " WHERE BOOK_ID = " + id1 + ";"
                           c.execute(com)
                           connect.commit()
@@ -915,13 +915,13 @@ def buy():
                           c.execute(query2)
                           connect.commit()
                           break
-                	break
+                    break
             break
         break
     if opt == 4:
-    	clear()
-    	Banner()
-    	start()
+        clear()
+        Banner()
+        start()
 
 
 
@@ -929,20 +929,20 @@ def buy():
 
 #If User Reviews A Book 
 def review():
-	import mysql.connector as t 
-	connect = t.connect(host = 'localhost', user = 'root', password = 'root', database = 'reviews')
-	c = connect.cursor()
-	name = m.input("[cyan]Enter Your Full Name : ")
-	email = m.input("[cyan]Enter Your Email : ")
-	book_name = m.input("[cyan]Enter The Name Of The Book : ")
-	review = m.input("[cyan]Enter Your Review : ")
-	query = "insert into reviews(NAME, EMAIL, BOOK_NAME, REVIEW) values ('{}','{}','{}','{}')".format(name, email, book_name, review)
-	c.execute(query)
-	connect.commit()
-	m.print("[green][+] THANKS FOR YOUR PRECIOUS REVIEW ♥")
-	speak("THANKS FOR YOUR PRECIOUS REVIEW")
-	m.print("[green][+] KEEP VISITING US ☺")
-	speak("KEEP VISITING US")
+    import mysql.connector as t 
+    connect = t.connect(host = 'localhost', user = 'root', password = 'root', database = 'reviews')
+    c = connect.cursor()
+    name = m.input("[cyan]Enter Your User Name : ")
+    email = m.input("[cyan]Enter Your Email : ")
+    book_name = m.input("[cyan]Enter The Name Of The Book : ")
+    review = m.input("[cyan]Enter Your Review : ")
+    query = "insert into reviews(NAME, EMAIL, BOOK_NAME, REVIEW) values ('{}','{}','{}','{}')".format(name, email, book_name, review)
+    c.execute(query)
+    connect.commit()
+    m.print("[green][+] THANKS FOR YOUR PRECIOUS REVIEW ♥")
+    speak("THANKS FOR YOUR PRECIOUS REVIEW")
+    m.print("[green][+] KEEP VISITING US ☺")
+    speak("KEEP VISITING US")
 
 
 
@@ -951,26 +951,26 @@ def review():
 
 #About Us
 def About():
-	c.print("\n[green]---------------------------------------- WELCOME TO THE ABOUT SECTION OF HACKER HUB ----------------------------------------\n")
-	c.print("[green]Hello ! Greetings User Of Hacker Hub Library.")
-	c.print("[green]Hope Using This Book Library You Got Great Books Embbeded With Powerful Knowledge About CyberSpace And Much More !")
-	c.print("[green]We Are A Curious Team Working And Researching On Hacking And Programming.")
-	c.print("[green]Here We Present Some Information About The Programmer Of This FrameWork ...")
-	c.print("[green]Names :- \n   RAHUL DIXIT   \n   SAKSHAM AGARWAL   \n   LOV DWIVEDI")
-	c.print("[green]This FrameWork Was Divided Into Pieces In Order To Maintain The Accuracy Of The FrameWork.") 
-	c.print("[green]Each Of Our Programmers Worked Efficiently And Gave Their Best In Designing And Obtaining Such An Amazing Output.\n")
-	c.print("[green]Name And Work Of Each Programmer :-")
-	c.print("\t\t[red] RAHUL DIXIT \t\t")
-	c.print("\t[green]        Desginer Of Main Page, Login Page, In Login Page\n")
-	c.print("\t\t[red] SAKSHAM AGARWAL \t\t")
-	c.print("\t[green]        Desginer Of Resgistration Page, Review Page, Admin Panel\n")
-	c.print("\t\t[red] LOV DWIVEDI \t\t")
-	c.print("\t[green]        Creator Of Databases, Maintaing Databases \n")
-	c.print("[green]We Thanks All Our Supporters And Teachers For All The Help In Building This Amazing FrameWork ♥.")
-	c.print("[green]There Were Bug Hunters Who Helped Us Finding The Bugs And We Rectified Them To Make The FrameWork Work To The Maximum Efficiency.")
-	c.print("[green]A Special Thanks To Bug Hunters ♥.")
-	c.print("[green]Once Again A ♥ Hearty ♥ Thanks To All The Helping Hands And Supporters Who Contributed In This FrameWork.\n\n")
-	c.print("[green]REGARDS :- TEAM INFINITY \n")
+    c.print("\n[green]---------------------------------------- WELCOME TO THE ABOUT SECTION OF HACKER HUB ----------------------------------------\n")
+    c.print("[green]Hello ! Greetings User Of Hacker Hub Library.")
+    c.print("[green]Hope Using This Book Library You Got Great Books Embbeded With Powerful Knowledge About CyberSpace And Much More !")
+    c.print("[green]We Are A Curious Team Working And Researching On Hacking And Programming.")
+    c.print("[green]Here We Present Some Information About The Programmer Of This FrameWork ...")
+    c.print("[green]Names :- \n   RAHUL DIXIT   \n   SAKSHAM AGARWAL   \n   LOV DWIVEDI")
+    c.print("[green]This FrameWork Was Divided Into Pieces In Order To Maintain The Accuracy Of The FrameWork.") 
+    c.print("[green]Each Of Our Programmers Worked Efficiently And Gave Their Best In Designing And Obtaining Such An Amazing Output.\n")
+    c.print("[green]Name And Work Of Each Programmer :-")
+    c.print("\t\t[red] RAHUL DIXIT \t\t")
+    c.print("\t[green]        Desginer Of Main Page, Login Page, In Login Page\n")
+    c.print("\t\t[red] SAKSHAM AGARWAL \t\t")
+    c.print("\t[green]        Desginer Of Resgistration Page, Review Page, Admin Panel\n")
+    c.print("\t\t[red] LOV DWIVEDI \t\t")
+    c.print("\t[green]        Creator Of Databases, Maintaing Databases \n")
+    c.print("[green]We Thanks All Our Supporters And Teachers For All The Help In Building This Amazing FrameWork ♥.")
+    c.print("[green]There Were Bug Hunters Who Helped Us Finding The Bugs And We Rectified Them To Make The FrameWork Work To The Maximum Efficiency.")
+    c.print("[green]A Special Thanks To Bug Hunters ♥.")
+    c.print("[green]Once Again A ♥ Hearty ♥ Thanks To All The Helping Hands And Supporters Who Contributed In This FrameWork.\n\n")
+    c.print("[green]REGARDS :- TEAM INFINITY \n")
 
 
 
@@ -979,19 +979,19 @@ def About():
 
 #About Hacker Hub
 def About_Hacker_Hub():
-	c.print("\n[green]---------------------------------------- WELCOME TO THE ABOUT SECTION OF HACKER HUB ----------------------------------------\n")
-	c.print("[green]Hello ! Greetings User Of Hacker Hub Library.")
-	c.print("[green]Hope Using This Book Library You Got Great Books Embbeded With Powerful Knowledge About CyberSpace And Much More !")
-	c.print("[green]The Aim Of Building This Library Was To Provide Tech Geeks With A Centralised Place Which Has Got All The Powerful Books.",end = "")
-	c.print("[green]Written By Expirenced People Of Their Respective Fields And To Provide People Expensive Books At A Low Rate.", end = "")
-	c.print("[green]Spread Knowledge About CyberSecurity And It's Importance.")
-	c.print("[green]In Today's World People/Students Those Who Are Willing To Start Their Career In Ethical Hacking And Programming.")
-	c.print("[green]Are Facing The Most Common Problem That's From Where To Start And Which Books To Refer And From Where To Get These Books For A Affordable Price.")
-	c.print("[green]Hacker Hub Library Solves All These Problems By Centralising The Best Books At Low Rates.")
-	c.print("[green]We Are Thankful For Having Huge Number Of Users And Thankful To The Designers For Designing Such An Beautiful Place.")
-	c.print("[green]Thanks Everyone For Giving Us Love ♥.")
-	c.print("[green]We Will Upgrade Ourseleves Of The Latest So Every Reader Of Our Library Gets Best Expirence.\n\n")
-	c.print("[green]REGARDS :- TEAM INFINITY \n")
+    c.print("\n[green]---------------------------------------- WELCOME TO THE ABOUT SECTION OF HACKER HUB ----------------------------------------\n")
+    c.print("[green]Hello ! Greetings User Of Hacker Hub Library.")
+    c.print("[green]Hope Using This Book Library You Got Great Books Embbeded With Powerful Knowledge About CyberSpace And Much More !")
+    c.print("[green]The Aim Of Building This Library Was To Provide Tech Geeks With A Centralised Place Which Has Got All The Powerful Books.",end = "")
+    c.print("[green]Written By Expirenced People Of Their Respective Fields And To Provide People Expensive Books At A Low Rate.", end = "")
+    c.print("[green]Spread Knowledge About CyberSecurity And It's Importance.")
+    c.print("[green]In Today's World People/Students Those Who Are Willing To Start Their Career In Ethical Hacking And Programming.")
+    c.print("[green]Are Facing The Most Common Problem That's From Where To Start And Which Books To Refer And From Where To Get These Books For A Affordable Price.")
+    c.print("[green]Hacker Hub Library Solves All These Problems By Centralising The Best Books At Low Rates.")
+    c.print("[green]We Are Thankful For Having Huge Number Of Users And Thankful To The Designers For Designing Such An Beautiful Place.")
+    c.print("[green]Thanks Everyone For Giving Us Love ♥.")
+    c.print("[green]We Will Upgrade Ourseleves Of The Latest So Every Reader Of Our Library Gets Best Expirence.\n\n")
+    c.print("[green]REGARDS :- TEAM INFINITY \n")
 
 
 
@@ -1000,26 +1000,26 @@ def About_Hacker_Hub():
 
 #Anonymous Login 
 def anonymous():
-	c.print("[green]1. Available Books")
-	c.print("[red]2. Review Book")
-	c.print("[magenta]3. About Us")
-	c.print("[yellow]4. About Hacker Hub")
-	c.print("[red]5. Exit\n")
-	opt = int(c.input("[cyan]Enter The Task To Be Performed : "))
-	if opt == 1:
-		avail()
-		anonymous()
-	if opt == 2:
-		review()
-		anonymous()
-	if opt == 3:
-		About()
-		anonymous()
-	if opt == 4:
-		About_Hacker_Hub()
-		anonymous()
-	if opt == 5:
-		out()
+    c.print("[green]1. Available Books")
+    c.print("[red]2. Review Book")
+    c.print("[magenta]3. About Us")
+    c.print("[yellow]4. About Hacker Hub")
+    c.print("[red]5. Exit\n")
+    opt = int(c.input("[cyan]Enter The Task To Be Performed : "))
+    if opt == 1:
+        avail()
+        anonymous()
+    if opt == 2:
+        review()
+        anonymous()
+    if opt == 3:
+        About()
+        anonymous()
+    if opt == 4:
+        About_Hacker_Hub()
+        anonymous()
+    if opt == 5:
+        out()
 
 
 
@@ -1028,9 +1028,9 @@ def anonymous():
 
 #Exiting 
 def out():
-	clear()
-	exit()
-	
+    clear()
+    exit()
+    
 
 
 
